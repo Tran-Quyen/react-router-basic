@@ -2,7 +2,7 @@ import NotFoundPage from 'pages/NotFound';
 
 const ClientRoutes = [
   {
-    path: '/notfound',
+    path: '*',
     name: 'NotFound',
     element: <NotFoundPage />,
   },
