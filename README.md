@@ -1,14 +1,3 @@
-
-#### ❄️ Author: Quyen Dang
-
-#### 🔥 Facebook: https://www.facebook.com/QuyenGiaSuJS/
-
-#### 🍻 Discord: https://discord.gg/2QY98Dqv
-
-#### ✨ Phone: (+84)337846412
-
-#### 😄 Magic Number: 142857 (x 1,2,3,4,5,6,7) (Secret Egypt)
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -79,3 +68,13 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+#### ❄️ Author: Quyen Dang
+
+#### 🔥 Facebook: https://www.facebook.com/QuyenGiaSuJS/
+
+#### 🍻 Discord: https://discord.gg/2QY98Dqv
+
+#### ✨ Phone: (+84)337846412
+
+#### 😄 Magic Number: 142857 (x 1,2,3,4,5,6,7) (Secret Egypt)
