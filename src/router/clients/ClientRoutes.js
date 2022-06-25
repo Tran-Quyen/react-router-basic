@@ -8,6 +8,7 @@ const ClientRoutes = [
     path: '/',
     name: 'Home',
     element: <HomePage />,
+    exact: true,
   },
   {
     path: '/about',
