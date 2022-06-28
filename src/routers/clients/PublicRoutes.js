@@ -12,7 +12,9 @@ const PublicClientRoutes = [
   {
     path: '/',
     component: Home,
-    exact: true,
+    updateRouteProps: {
+      exact: true,
+    },
   },
   {
     path: '/about',

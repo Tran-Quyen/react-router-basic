@@ -7,7 +7,12 @@ function RouterView() {
   return (
     <Routes>
       {publicRoutes.map((route, idx) => {
-        const { path, layout: RouteLayout, component: Content, exact } = route;
+        const {
+          path,
+          layout: RouteLayout,
+          component: Content,
+          updateRouteProps = {},
+        } = route;
 
         let Layout = DefaultLayout;
 
@@ -20,9 +25,14 @@ function RouterView() {
           </Layout>
         );
 
-        if (exact)
-          return <Route key={idx} exact path={path} element={<Page />} />;
-        else return <Route key={idx} path={path} element={<Page />} />;
+        return (
+          <Route
+            key={idx}
+            path={path}
+            element={<Page />}
+            {...updateRouteProps}
+          />
+        );
       })}
     </Routes>
   );
