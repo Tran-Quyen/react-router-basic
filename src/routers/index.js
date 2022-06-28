@@ -1,8 +1,8 @@
-import ClientRoutes from './clients';
+import { PublicClientRoutes, PrivateClientRoutes } from './clients';
 import AdminRoutes from './admins';
-import ServiceRoutes from './services';
 
-export const routes = [...ClientRoutes, ...AdminRoutes, ...ServiceRoutes];
+export const publicRoutes = [...PublicClientRoutes];
+export const privateRoutes = [...PrivateClientRoutes, ...AdminRoutes];
 
 export { default } from './RouterView';
 

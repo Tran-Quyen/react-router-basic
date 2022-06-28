@@ -1,13 +1,28 @@
-import { Routes, Route, Link } from 'react-router-dom';
-import { routes } from './index';
+import { DefaultLayout } from 'components/Layouts';
+import { Fragment } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import { publicRoutes } from './index';
 
 function RouterView() {
   return (
     <Routes>
-      {routes.map((route, idx) => {
-        if (route.exact)
-          return <Route key={route.name} exact path={route.path} element={route.element} />;
-        else return <Route key={route.name} path={route.path} element={route.element} />;
+      {publicRoutes.map((route, idx) => {
+        const { path, layout: routeLayout, component: Content, exact } = route;
+
+        let Layout = DefaultLayout;
+
+        if (routeLayout) Layout = routeLayout;
+        else if (routeLayout === null) Layout = Fragment;
+
+        const Page = () => (
+          <Layout>
+            <Content />
+          </Layout>
+        );
+
+        if (exact)
+          return <Route key={idx} exact path={path} element={<Page />} />;
+        else return <Route key={idx} path={path} element={<Page />} />;
       })}
     </Routes>
   );
