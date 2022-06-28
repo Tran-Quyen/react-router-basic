@@ -1,6 +1,6 @@
 import NotFoundPage from 'pages/NotFound';
 
-const ClientRoutes = [
+const ServiceRoutes = [
   {
     path: '*',
     name: 'NotFound',
@@ -8,5 +8,5 @@ const ClientRoutes = [
   },
 ];
 
-export default ClientRoutes;
+export default ServiceRoutes;
 
