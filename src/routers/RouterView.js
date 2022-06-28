@@ -7,12 +7,12 @@ function RouterView() {
   return (
     <Routes>
       {publicRoutes.map((route, idx) => {
-        const { path, layout: routeLayout, component: Content, exact } = route;
+        const { path, layout: RouteLayout, component: Content, exact } = route;
 
         let Layout = DefaultLayout;
 
-        if (routeLayout) Layout = routeLayout;
-        else if (routeLayout === null) Layout = Fragment;
+        if (RouteLayout) Layout = RouteLayout;
+        else if (RouteLayout === null) Layout = Fragment;
 
         const Page = () => (
           <Layout>
