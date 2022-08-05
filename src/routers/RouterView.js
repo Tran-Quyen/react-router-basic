@@ -1,40 +1,42 @@
 import { DefaultLayout } from 'layouts';
 import { Fragment } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { publicRoutes } from './index';
 
 function RouterView() {
   return (
-    <Routes>
-      {publicRoutes.map((route, idx) => {
-        const {
-          path,
-          layout: RouteLayout,
-          component: Content,
-          updateRouteProps = {},
-        } = route;
+    <Router>
+      <Routes>
+        {publicRoutes.map((route, idx) => {
+          const {
+            path,
+            layout: RouteLayout,
+            component: Content,
+            updateRouteProps = {},
+          } = route;
 
-        let Layout = DefaultLayout;
+          let Layout = DefaultLayout;
 
-        if (RouteLayout) Layout = RouteLayout;
-        else if (RouteLayout === null) Layout = Fragment;
+          if (RouteLayout) Layout = RouteLayout;
+          else if (RouteLayout === null) Layout = Fragment;
 
-        const Page = () => (
-          <Layout>
-            <Content />
-          </Layout>
-        );
+          const Page = () => (
+            <Layout>
+              <Content />
+            </Layout>
+          );
 
-        return (
-          <Route
-            key={idx}
-            path={path}
-            element={<Page />}
-            {...updateRouteProps}
-          />
-        );
-      })}
-    </Routes>
+          return (
+            <Route
+              key={idx}
+              path={path}
+              element={<Page />}
+              {...updateRouteProps}
+            />
+          );
+        })}
+      </Routes>
+    </Router>
   );
 }
 
