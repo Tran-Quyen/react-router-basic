@@ -1,4 +1,4 @@
-import { DefaultLayout } from 'components/Layouts';
+import { DefaultLayout } from 'layouts';
 import { Fragment } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { publicRoutes } from './index';

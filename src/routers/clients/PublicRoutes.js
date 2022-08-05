@@ -1,5 +1,5 @@
 // Layouts
-import { OtherLayout } from 'components/Layouts';
+import { OtherLayout } from 'layouts';
 
 // Pages
 import Home from 'pages/Home';
